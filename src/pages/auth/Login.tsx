@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 export const Login = () => {
+    const navigate = useNavigate();
+    const goToDashboard = () => {
+        navigate("/admin_dashboard");
+    };
 
     return <div className="flex items-center justify-center">
         <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 w-full">
@@ -34,7 +40,7 @@ export const Login = () => {
                     <a href="/forgot_password" className="text-sm text-indigo-600 hover:text-indigo-500">Forgot password?</a>
                 </div>
 
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-black font-medium rounded-lg">
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-black font-medium rounded-lg" onClick={goToDashboard}>
                     Sign In
                 </button>
                 </form>

@@ -6,6 +6,8 @@ import { Login } from './pages/auth/Login.tsx';
 import { Register } from './pages/auth/Register.tsx';
 import { ForgotPassword } from './pages/auth/ForgotPassword.tsx';
 import { ResetPassword } from './pages/auth/ResetPassword.tsx';
+import { AdminDashboard } from './pages/dashboard/admin_dashboard/index.tsx';
+import { DasboardCopy } from './pages/dashboard/admin_dashboard/dashboard-copy.tsx';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/forgot_password" element={<ForgotPassword />} />
         <Route path="/reset_password" element={<ResetPassword />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/admin_dashboard" element={<AdminDashboard />} />
+        <Route path="/sample_dashboard" element={<DasboardCopy />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <PWABadge />
