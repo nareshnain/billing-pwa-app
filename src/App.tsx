@@ -8,6 +8,8 @@ import { ForgotPassword } from './pages/auth/ForgotPassword.tsx';
 import { ResetPassword } from './pages/auth/ResetPassword.tsx';
 import { AdminDashboard } from './pages/dashboard/admin_dashboard/index.tsx';
 import { DasboardCopy } from './pages/dashboard/admin_dashboard/dashboard-copy.tsx';
+import { OwnerDashboard } from './pages/dashboard/owner_dashboard/index.tsx';
+import { CustomerDashboard } from './pages/dashboard/customer_dashboard/index.tsx';
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
         <Route path="/reset_password" element={<ResetPassword />} />
         <Route path="/register" element={<Register />} />
         <Route path="/admin_dashboard" element={<AdminDashboard />} />
-        <Route path="/sample_dashboard" element={<DasboardCopy />} />
+        <Route path="/owner_dashboard" element={<OwnerDashboard />} />
+        <Route path="/customer_dashboard" element={<CustomerDashboard />} />
+        <Route path="/dashboard_copy" element={<DasboardCopy />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <PWABadge />
