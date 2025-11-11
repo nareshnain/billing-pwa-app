@@ -1,5 +1,6 @@
 // src/utils/localStorage.ts
 
+import { User_Role } from "../common/constants";
 import type { LoginResponse } from "../service/auth";
 
 export const setUserToken = (token: string) => {
@@ -25,4 +26,19 @@ export const getUserInfo = (): Record<string, any> | null => {
 
 export const removeUserInfo = () => {
   localStorage.removeItem('userInfo');
+};
+
+export const isAdmin = (): boolean => {
+  const userInfo = getUserInfo();
+  return userInfo?.userRole === User_Role.Admin;
+};
+
+export const isOwner = (): boolean => {
+  const userInfo = getUserInfo();
+  return userInfo?.userRole === User_Role.Owner;
+};
+
+export const isCustomer = (): boolean => {
+  const userInfo = getUserInfo();
+  return userInfo?.userRole === User_Role.Customer;
 };

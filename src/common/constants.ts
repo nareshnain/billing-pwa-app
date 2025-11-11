@@ -11,6 +11,8 @@ export const Routes_Names = {
     Owner_Dashboard: '/owner_dashboard',
     Customer_Dashboard: '/customer_dashboard',
     Customers: '/customers',
+    Business: '/business',
+    Order: '/orders',
     Invoices: '/invoices',
     Products: '/products',
     Settings: '/settings',
